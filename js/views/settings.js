@@ -35,7 +35,8 @@ export function settingsView(ctx) {
       <h2 class="section-title">Series</h2>
       <label class="field">Show
         <select id="series">
-          ${index.series.map((e) => `<option value="${esc(e.id)}" ${e.id === series.id ? 'selected' : ''}>${esc(e.title ?? e.id)}</option>`).join('')}
+          <option value="" ${!s.seriesId ? 'selected' : ''}>Automatic — what’s being preached now</option>
+          ${index.series.map((e) => `<option value="${esc(e.id)}" ${e.id === s.seriesId ? 'selected' : ''}>${esc(e.title ?? e.id)}</option>`).join('')}
         </select>
       </label>
     </section>` : '';
@@ -44,6 +45,8 @@ export function settingsView(ctx) {
     title: 'Settings',
     html: `
       <header class="page-head"><h1>Settings</h1></header>
+
+      ${seriesPicker}
 
       <section class="card">
         <h2 class="section-title">${icon('bell')} Daily reminder</h2>
@@ -77,8 +80,6 @@ export function settingsView(ctx) {
         <h2 class="section-title">Get the app</h2>
         ${install}
       </section>
-
-      ${seriesPicker}
 
       <section class="card">
         <h2 class="section-title">Your data</h2>

@@ -1,0 +1,479 @@
+{
+  "church": "Neighbors and Nations Church",
+  "translation": "ESV",
+  "sermonTime": "10:00",
+  "readingPlan": {
+    "dayOffsets": [
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1
+    ]
+  },
+  "podcast": {
+    "spotifyShowUrl": "",
+    "applePodcastsUrl": "",
+    "rssUrl": ""
+  },
+  "id": "sermon-on-the-mount",
+  "title": "The Sermon on the Mount",
+  "subtitle": "Matthew 5–7",
+  "startDate": "2027-01-03",
+  "theme": {
+    "accent": "#3f7a5a"
+  },
+  "weeks": [
+    {
+      "title": "The Beatitudes",
+      "passage": "Matthew 5:1-12",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Salt and light",
+      "passage": "Matthew 5:13-16",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "The law and murder",
+      "passage": "Matthew 5:17-26",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Adultery, divorce, and oaths",
+      "passage": "Matthew 5:27-37",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "An eye for an eye; love your enemies",
+      "passage": "Matthew 5:38-48",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Giving, praying, and fasting",
+      "passage": "Matthew 6:1-18",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Treasures and provision",
+      "passage": "Matthew 6:19-34",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Judging and asking",
+      "passage": "Matthew 7:1-12",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "The narrow gate, the tree and its fruit, the wise and foolish builders",
+      "passage": "Matthew 7:13-29",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Recap Sunday",
+      "passage": "",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    }
+  ]
+}

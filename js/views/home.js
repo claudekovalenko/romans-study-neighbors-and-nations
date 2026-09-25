@@ -50,12 +50,24 @@ export function homeView(ctx) {
     parts.push(`
       <section class="card">
         <p class="eyebrow">No reading today</p>
-        <p>Next reading: <a href="#/week/${loc.nextReading.weekNumber}/day/${loc.nextReading.index}">${esc(loc.nextReading.passage || 'coming soon')}</a> on ${esc(fmtLong(loc.nextReading.date))}.</p>
+        <p>Next reading: ${loc.nextReading.passage
+          ? `<a href="#/week/${loc.nextReading.weekNumber}/day/${loc.nextReading.index}">${esc(loc.nextReading.passage)}</a> on `
+          : ''}${esc(fmtLong(loc.nextReading.date))}.</p>
       </section>`);
   }
 
   const cw = loc.currentWeek;
-  if (cw) {
+  const cwGap = cw ? daysUntil(cw.sermonDate) : 0;
+  if (cw && cwGap > 7 && loc.status === 'active') {
+    // Between parts of the series (e.g. Romans pauses for Advent).
+    parts.push(`
+      <section class="card">
+        <p class="eyebrow">${esc(series.title)} is on a break</p>
+        <h2>We pick back up ${esc(fmtLong(cw.sermonDate))}</h2>
+        <p>${cw.part ? `${esc(cw.part)} begins with ` : 'Next: '}week ${cw.number}${cw.passage ? `, ${esc(cw.passage)}` : ''}.</p>
+        <a class="text-link" href="#/weeks">See the whole series ${icon('chevron')}</a>
+      </section>`);
+  } else if (cw && cwGap <= 7) {
     const isToday = sameDay(cw.sermonDate, loc.today);
     parts.push(`
       <section class="card">

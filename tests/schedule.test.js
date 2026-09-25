@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { buildSchedule, locate, toISO, allDays } from '../js/schedule.js';
 
 const series = {
@@ -73,4 +74,32 @@ test('locate: after the last sermon', () => {
 test('allDays is chronological', () => {
   const days = allDays(buildSchedule(series));
   for (let i = 1; i < days.length; i++) assert.ok(days[i].date >= days[i - 1].date);
+});
+
+test('pickCurrentSeries follows the preaching calendar', async () => {
+  const { pickCurrentSeries } = await import('../js/schedule.js');
+  const load = (id) => ({ id, schedule: buildSchedule(JSON.parse(readFileSync(`series/${id}/series.json`, 'utf8'))) });
+  const list = ['romans', 'advent-2026', 'sermon-on-the-mount', 'easter-2027'].map(load);
+  const on = (iso) => pickCurrentSeries(list, at(iso));
+  assert.equal(on('2026-09-25'), 'romans');
+  assert.equal(on('2026-11-15'), 'romans'); // last Sunday of Part 1
+  assert.equal(on('2026-11-16'), 'advent-2026');
+  assert.equal(on('2027-01-01'), 'sermon-on-the-mount');
+  assert.equal(on('2027-03-08'), 'easter-2027');
+  assert.equal(on('2027-03-29'), 'romans'); // Part 2 starts Apr 4
+  assert.equal(on('2028-01-01'), 'romans'); // everything over: most recent
+});
+
+test('Romans dates match the church calendar, including breaks', async () => {
+  const { resumesAfterBreak } = await import('../js/schedule.js');
+  const s = buildSchedule(JSON.parse(readFileSync('series/romans/series.json', 'utf8')));
+  const dates = Object.fromEntries(s.map((w) => [w.number, toISO(w.sermonDate)]));
+  assert.equal(s.length, 31);
+  assert.equal(dates[1], '2026-09-13');
+  assert.equal(dates[10], '2026-11-15');
+  assert.equal(dates[11], '2027-04-04');
+  assert.equal(dates[20], '2027-06-06');
+  assert.equal(dates[21], '2027-08-15');
+  assert.equal(dates[31], '2027-10-24');
+  assert.deepEqual(s.filter((w) => resumesAfterBreak(s, w)).map((w) => w.number), [11, 21]);
 });

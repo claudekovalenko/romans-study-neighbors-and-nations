@@ -1,0 +1,254 @@
+{
+  "church": "Neighbors and Nations Church",
+  "translation": "ESV",
+  "sermonTime": "10:00",
+  "readingPlan": {
+    "dayOffsets": [
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1
+    ]
+  },
+  "podcast": {
+    "spotifyShowUrl": "",
+    "applePodcastsUrl": "",
+    "rssUrl": ""
+  },
+  "id": "advent-2026",
+  "title": "Advent",
+  "subtitle": "The birth of Jesus in Luke’s Gospel",
+  "startDate": "2026-11-29",
+  "theme": {
+    "accent": "#6d4c9f"
+  },
+  "weeks": [
+    {
+      "title": "John the Baptist",
+      "passage": "Luke 1:5-25",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Mary visited",
+      "passage": "Luke 1:26-38",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Mary’s response",
+      "passage": "Luke 1:39-56",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Jesus’ birth",
+      "passage": "Luke 2:1-21",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "Jesus presented at the temple",
+      "passage": "Luke 2:22-38",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    }
+  ]
+}

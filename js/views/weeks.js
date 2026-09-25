@@ -1,4 +1,4 @@
-import { locate, sameDay } from '../schedule.js';
+import { locate, sameDay, resumesAfterBreak } from '../schedule.js';
 import { progress } from '../store.js';
 import { esc, fmtLong, fmtShort, fmtWeekday, icon, videoBlock, spotifyBlock, progressBar } from '../ui.js';
 
@@ -10,12 +10,26 @@ export function weeksListView(ctx) {
   const { series, schedule } = ctx;
   const loc = locate(schedule);
 
+  // Group headings: a new "part", or the series resuming after a break.
+  const heading = (w) => {
+    const prev = schedule[w.number - 2];
+    if (w.part && w.part !== prev?.part) {
+      const inPart = schedule.filter((x) => x.part === w.part);
+      const range = `${fmtShort(inPart[0].sermonDate)} – ${fmtShort(inPart.at(-1).sermonDate)}`;
+      return `<li class="part-head"><h2>${esc(w.part)}</h2><span>${esc(range)}</span></li>`;
+    }
+    if (!w.part && resumesAfterBreak(schedule, w)) {
+      return `<li class="part-head"><span>Resumes ${esc(fmtShort(w.sermonDate))}</span></li>`;
+    }
+    return '';
+  };
+
   const items = schedule.map((w) => {
     const done = w.days.filter((d) => progress.isDone(series.id, d.id)).length;
     const current = loc.currentWeek?.number === w.number;
     const past = w.sermonDate < loc.today;
     const sub = w.title && w.passage ? w.passage : w.title || w.passage ? '' : 'Passage coming soon';
-    return `
+    return `${heading(w)}
       <li>
         <a class="week-row ${current ? 'is-current' : ''} ${past ? 'is-past' : ''}" href="#/week/${w.number}" ${current ? 'aria-current="true"' : ''}>
           <span class="week-num">${w.number}</span>

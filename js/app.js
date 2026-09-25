@@ -1,5 +1,5 @@
 import { config } from '../config.js';
-import { buildSchedule, locate } from './schedule.js';
+import { buildSchedule, locate, pickCurrentSeries } from './schedule.js';
 import { settings } from './store.js';
 import { checkReminder } from './reminders.js';
 import { esc } from './ui.js';
@@ -23,6 +23,7 @@ let lastPath = null;
 
 const ctx = {
   index: null,
+  all: {}, // id → series, for every series in the index
   series: null,
   schedule: [],
   installPrompt: null,
@@ -38,18 +39,32 @@ async function fetchJSON(path) {
   return res.json();
 }
 
-async function loadSeries(id) {
-  const entry = ctx.index.series.find((s) => s.id === id) ?? ctx.index.series.find((s) => s.id === ctx.index.active);
-  ctx.series = await fetchJSON(entry.path);
+async function loadAll() {
+  const loaded = await Promise.all(
+    ctx.index.series.map((e) => fetchJSON(e.path).then((s) => [e.id, s], () => null)),
+  );
+  ctx.all = Object.fromEntries(loaded.filter(Boolean));
+  if (!Object.keys(ctx.all).length) throw new Error('No series could be loaded');
+}
+
+// No saved choice means "whatever is being preached now".
+function chooseSeries() {
+  const saved = settings.get().seriesId;
+  if (saved && ctx.all[saved]) return saved;
+  const list = Object.entries(ctx.all).map(([id, s]) => ({ id, schedule: buildSchedule(s) }));
+  return pickCurrentSeries(list) ?? (ctx.all[ctx.index.active] ? ctx.index.active : list[0].id);
+}
+
+function useSeries(id) {
+  ctx.series = ctx.all[id];
   ctx.schedule = buildSchedule(ctx.series);
-  const accent = ctx.series.theme?.accent;
-  if (accent) document.documentElement.style.setProperty('--accent', accent);
+  document.documentElement.style.setProperty('--accent', ctx.series.theme?.accent ?? '#b5832a');
   document.querySelector('.app-series').textContent = ctx.series.title;
 }
 
-async function switchSeries(id) {
-  settings.set({ seriesId: id });
-  await loadSeries(id);
+function switchSeries(id) {
+  settings.set({ seriesId: id || null });
+  useSeries(chooseSeries());
   location.hash = '#/';
   render();
 }
@@ -98,7 +113,8 @@ async function start() {
   applySettings();
   try {
     ctx.index = await fetchJSON(config.seriesIndex);
-    await loadSeries(settings.get().seriesId ?? ctx.index.active);
+    await loadAll();
+    useSeries(chooseSeries());
   } catch (err) {
     main.innerHTML = `<h1>Couldn’t load the series</h1><p class="muted">${esc(err.message)}</p><p>Check your connection and try again.</p>`;
     return;
@@ -108,7 +124,10 @@ async function start() {
   remind();
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
-      render({ keepScroll: true }); // the date may have rolled over
+      // The date may have rolled over — possibly into the next series.
+      const id = chooseSeries();
+      if (id !== ctx.series.id) useSeries(id);
+      render({ keepScroll: true });
       remind();
     }
   });

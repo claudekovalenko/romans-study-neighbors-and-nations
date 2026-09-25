@@ -1,0 +1,164 @@
+{
+  "church": "Neighbors and Nations Church",
+  "translation": "ESV",
+  "sermonTime": "10:00",
+  "readingPlan": {
+    "dayOffsets": [
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1
+    ]
+  },
+  "podcast": {
+    "spotifyShowUrl": "",
+    "applePodcastsUrl": "",
+    "rssUrl": ""
+  },
+  "id": "easter-2027",
+  "title": "Easter",
+  "subtitle": "The road to the empty tomb",
+  "startDate": "2027-03-14",
+  "theme": {
+    "accent": "#b0492f"
+  },
+  "weeks": [
+    {
+      "title": "The Triumphal Entry",
+      "passage": "",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "The Passion",
+      "passage": "",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "title": "The Resurrection",
+      "passage": "",
+      "preacher": "",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ]
+    }
+  ]
+}

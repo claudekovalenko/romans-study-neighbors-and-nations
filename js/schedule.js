@@ -90,3 +90,25 @@ export function locate(schedule, now = new Date()) {
 export function daysUntil(date, now = new Date()) {
   return Math.round((startOfDay(date) - startOfDay(now)) / 86400000);
 }
+
+// Which series is being preached now? The one with the soonest sermon still
+// to come (today counts); once every series is over, the most recent one.
+// `list` is [{ id, schedule }].
+export function pickCurrentSeries(list, now = new Date()) {
+  const today = startOfDay(now);
+  let best = null;
+  for (const { id, schedule } of list) {
+    const next = schedule.find((w) => w.sermonDate >= today)?.sermonDate;
+    if (next && (!best?.next || next < best.next)) best = { id, next };
+  }
+  if (best) return best.id;
+  const latest = [...list].sort((a, b) => b.schedule.at(-1).sermonDate - a.schedule.at(-1).sermonDate)[0];
+  return latest?.id ?? null;
+}
+
+// A gap of more than a week before this sermon means the series paused
+// (e.g. Romans breaks for Advent) and this week resumes it.
+export function resumesAfterBreak(schedule, week) {
+  const prev = schedule[week.number - 2];
+  return Boolean(prev) && daysUntil(week.sermonDate, prev.sermonDate) > 7;
+}

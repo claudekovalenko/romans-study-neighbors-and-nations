@@ -1,6 +1,25 @@
 {
   "active": "romans",
   "series": [
-    { "id": "romans", "title": "Romans", "path": "series/romans/series.json" }
+    {
+      "id": "romans",
+      "title": "Romans",
+      "path": "series/romans/series.json"
+    },
+    {
+      "id": "advent-2026",
+      "title": "Advent 2026",
+      "path": "series/advent-2026/series.json"
+    },
+    {
+      "id": "sermon-on-the-mount",
+      "title": "The Sermon on the Mount",
+      "path": "series/sermon-on-the-mount/series.json"
+    },
+    {
+      "id": "easter-2027",
+      "title": "Easter 2027",
+      "path": "series/easter-2027/series.json"
+    }
   ]
 }

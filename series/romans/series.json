@@ -1,14 +1,7 @@
 {
-  "id": "romans",
-  "title": "Romans",
-  "subtitle": "The gospel of God for neighbors and nations",
   "church": "Neighbors and Nations Church",
   "translation": "ESV",
-  "startDate": "2026-10-04",
   "sermonTime": "10:00",
-  "theme": {
-    "accent": "#b5832a"
-  },
   "readingPlan": {
     "dayOffsets": [
       -6,
@@ -24,59 +17,248 @@
     "applePodcastsUrl": "",
     "rssUrl": ""
   },
+  "id": "romans",
+  "title": "Romans",
+  "subtitle": "The gospel of God for neighbors and nations",
+  "startDate": "2026-09-13",
+  "theme": {
+    "accent": "#b5832a"
+  },
   "weeks": [
     {
-      "title": "Set Apart for the Gospel",
-      "passage": "Romans 1:1-17",
-      "preacher": "",
-      "summary": "SAMPLE WEEK — replace with your own. Paul introduces himself, his calling, and the gospel he has been set apart to proclaim among all the nations.",
-      "bigIdea": "The gospel is the power of God for salvation to everyone who believes.",
+      "title": "Introduction",
+      "passage": "Romans 1:1-7",
+      "preacher": "Josh",
+      "summary": "",
+      "bigIdea": "",
       "videos": {
         "before": "",
         "after": ""
       },
       "podcastEpisodeUrl": "",
-      "questions": [
-        "What does Paul say the gospel is about (1:3-4)?",
-        "Why is Paul not ashamed of the gospel (1:16)?",
-        "Who are the neighbors and nations God is placing on your heart this week?"
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
       ],
-      "days": [
-        {
-          "passage": "Romans 1:1-7",
-          "title": "Called and set apart",
-          "prompt": "How does Paul describe himself? What would change if you saw yourself the same way?"
-        },
-        {
-          "passage": "Romans 1:8-15",
-          "title": "Longing to see you",
-          "prompt": "What does Paul pray for the church in Rome? Pray the same for someone today."
-        },
-        {
-          "passage": "Romans 1:16-17",
-          "title": "Not ashamed",
-          "prompt": "Where are you tempted to be quiet about Jesus?"
-        },
-        {
-          "passage": "Acts 28:11-31",
-          "title": "Paul arrives in Rome",
-          "prompt": "Notice how Paul spends his time in Rome. What stands out?"
-        },
-        {
-          "passage": "Psalm 98",
-          "title": "Salvation made known to the nations",
-          "prompt": "Read this aloud as a prayer for the nations."
-        },
-        {
-          "passage": "Romans 1:1-17",
-          "title": "Read it all again",
-          "prompt": "Read the whole passage slowly. Write down one question to bring on Sunday."
-        }
-      ]
+      "part": "Part 1",
+      "date": "2026-09-13"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 1:8-17",
+      "preacher": "JT",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ],
+      "part": "Part 1"
+    },
+    {
+      "title": "",
+      "passage": "Romans 1:18-32",
+      "preacher": "JT",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ],
+      "part": "Part 1"
+    },
+    {
+      "title": "",
+      "passage": "Romans 2:1-29",
+      "preacher": "Josh",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ],
+      "part": "Part 1"
+    },
+    {
+      "title": "",
+      "passage": "Romans 3:1-8",
+      "preacher": "Josh",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ],
+      "part": "Part 1"
+    },
+    {
+      "title": "",
+      "passage": "Romans 3:9-31",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -117,11 +299,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 1"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 4:1-25",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -162,11 +345,58 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 1"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 5:1-11",
+      "preacher": "Nick",
+      "summary": "",
+      "bigIdea": "",
+      "videos": {
+        "before": "",
+        "after": ""
+      },
+      "podcastEpisodeUrl": "",
+      "questions": [],
+      "days": [
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        },
+        {
+          "passage": "",
+          "title": "",
+          "prompt": ""
+        }
+      ],
+      "part": "Part 1"
+    },
+    {
+      "title": "",
+      "passage": "Romans 5:12-21",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -207,11 +437,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 1"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 6:1-14",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -252,11 +483,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 1"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 6:15-23",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -297,11 +529,13 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2",
+      "date": "2027-04-04"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 7:1-6",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -342,11 +576,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 7:7-25",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -387,11 +622,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 8:1-17",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -432,11 +668,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 8:18-27",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -477,11 +714,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 8:28-39",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -522,11 +760,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 9:1-33",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -567,11 +806,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 10:1-21",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -612,11 +852,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 11:1-10",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -657,11 +898,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 11:11-24",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -702,11 +944,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 2"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 11:25-36",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -747,11 +990,13 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3",
+      "date": "2027-08-15"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 12:1-8",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -792,11 +1037,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 12:9-21",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -837,11 +1083,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 13:1-7",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -882,11 +1129,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 13:8-14",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -927,11 +1175,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 14:1-11",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -972,11 +1221,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 14:12-23",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -1017,11 +1267,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 15:1-13",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -1062,11 +1313,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 15:14-33",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -1107,11 +1359,12 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
       "title": "",
-      "passage": "",
+      "passage": "Romans 16:1-27",
       "preacher": "",
       "summary": "",
       "bigIdea": "",
@@ -1152,13 +1405,14 @@
           "title": "",
           "prompt": ""
         }
-      ]
+      ],
+      "part": "Part 3"
     },
     {
-      "title": "",
+      "title": "Romans Recap Sunday",
       "passage": "",
       "preacher": "",
-      "summary": "",
+      "summary": "A look back over the whole letter.",
       "bigIdea": "",
       "videos": {
         "before": "",
@@ -1197,187 +1451,8 @@
           "title": "",
           "prompt": ""
         }
-      ]
-    },
-    {
-      "title": "",
-      "passage": "",
-      "preacher": "",
-      "summary": "",
-      "bigIdea": "",
-      "videos": {
-        "before": "",
-        "after": ""
-      },
-      "podcastEpisodeUrl": "",
-      "questions": [],
-      "days": [
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        }
-      ]
-    },
-    {
-      "title": "",
-      "passage": "",
-      "preacher": "",
-      "summary": "",
-      "bigIdea": "",
-      "videos": {
-        "before": "",
-        "after": ""
-      },
-      "podcastEpisodeUrl": "",
-      "questions": [],
-      "days": [
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        }
-      ]
-    },
-    {
-      "title": "",
-      "passage": "",
-      "preacher": "",
-      "summary": "",
-      "bigIdea": "",
-      "videos": {
-        "before": "",
-        "after": ""
-      },
-      "podcastEpisodeUrl": "",
-      "questions": [],
-      "days": [
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        }
-      ]
-    },
-    {
-      "title": "",
-      "passage": "",
-      "preacher": "",
-      "summary": "",
-      "bigIdea": "",
-      "videos": {
-        "before": "",
-        "after": ""
-      },
-      "podcastEpisodeUrl": "",
-      "questions": [],
-      "days": [
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        },
-        {
-          "passage": "",
-          "title": "",
-          "prompt": ""
-        }
-      ]
+      ],
+      "part": "Part 3"
     }
   ]
 }
