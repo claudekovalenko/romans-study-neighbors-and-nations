@@ -38,9 +38,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - run: node scripts/build-web.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: www
+          path: .
       - id: deployment
         uses: actions/deploy-pages@v4

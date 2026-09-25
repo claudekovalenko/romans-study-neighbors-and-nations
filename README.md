@@ -8,11 +8,9 @@ An installable web app (PWA) for following a sermon series day by day. It was bu
 - **Listen:** the latest recorded message plus an archive of earlier ones (Spotify embeds).
 - **Settings:** a daily reminder, a calendar export of the whole plan, text size, install help, and a series switcher.
 
-It runs as a website that can be installed from the browser, **and** as real iPhone and Android apps built from the same code with [Capacitor](https://capacitorjs.com). See [Phone apps](#phone-apps).
-
 The app works offline once installed. Progress and notes stay on each person's device, so nobody needs an account.
 
-The website has no build step: it's plain HTML, CSS, and JavaScript modules, so any static host works.
+There's no build step: it's plain HTML, CSS, and JavaScript modules, so any static host works.
 
 ---
 
@@ -82,7 +80,7 @@ The ESV terms limit how much text an app may store. This app keeps only the 20 m
 - **Calendar export (the dependable one):** Settings → *Download calendar file* adds every remaining reading to the phone's calendar with an alert at the chosen time. It can also add the Sunday sermons. It works on iPhone and Android.
 - **In-app notification:** if reminders are on and today's reading isn't done, the app sends a notification when it's opened after the reminder time. It also shows a badge on the app icon where supported.
   On iPhone, the app must first be added to the Home Screen.
-- **Phone apps:** real reminders. The iPhone and Android apps schedule a notification for each upcoming reading at the chosen time, directly on the phone, so no server is needed. They skip readings already marked as read and top up the schedule each time the app opens (iOS allows 64 pending notifications, so the next 60 are scheduled).
+- **Future option:** true scheduled push notifications, sent even when nobody opens the app, need a small server or a push service such as OneSignal or Firebase. The service worker already handles notification taps, so this can be added later.
 
 ## Podcast on Spotify
 
@@ -97,46 +95,11 @@ The simplest route is **[Spotify for Creators](https://creators.spotify.com)** (
 npm start          # serves at http://localhost:8080
 npm test           # schedule, media-link and series-file tests
 npm run validate   # checks every series file
-npm run build      # copies the web app into www/ (used by the apps and the site deploy)
 ```
 
 **Publishing (GitHub Pages):** the included workflow tests and deploys every push to `main`. One-time setup: repo **Settings → Pages → Source: GitHub Actions**. Any other static host also works, such as Netlify or Cloudflare Pages.
 
 When you change app code (anything outside `series/`), bump `VERSION` in `sw.js` so installed copies update. Series data always loads fresh when people are online.
-
-## Phone apps
-
-`android/` and `ios/` are the native projects. They wrap the same web code (`npm run build` copies it into `www/`).
-
-**How plan updates reach the apps:** the apps download `series/` files from the live website (`remoteBase` in `config.js`) every time they open. Editing `series.json` and pushing to `main` updates the apps too, with no new store release. If the phone is offline, the apps use the last copy they downloaded, then the copy built into the app.
-
-You only need a new store release when the **app code** changes (anything outside `series/`).
-
-**Test builds, without installing anything:** every push to `main` runs the *Phone apps* workflow in GitHub Actions.
-- **Android:** it builds an installable test app. Open the run in the **Actions** tab and download **sermon-series-android** at the bottom of the page. Unzip it and open `app-debug.apk` on an Android phone. You'll need to allow "install unknown apps".
-- **iPhone:** it checks that the app compiles. To run it on an iPhone you need a Mac with Xcode, or a cloud build service.
-
-**Working on the apps locally:**
-
-```bash
-npm install
-npm run android    # builds, syncs, opens Android Studio
-npm run ios        # builds, syncs, opens Xcode (Mac only)
-```
-
-After changing icons, run `npm run icons`, then `npx @capacitor/assets generate --iconBackgroundColor '#1f2a44' --splashBackgroundColor '#f7f3ec' --splashBackgroundColorDark '#11151d'`.
-
-**Publishing to the stores**
-
-| | Google Play | Apple App Store |
-|---|---|---|
-| Account | Play Console, $25 one-time | Apple Developer Program, $99/year |
-| Build | Android Studio → *Build → Generate Signed App Bundle* | Xcode → *Product → Archive* → upload |
-| Notes | New personal accounts must run a closed test with 12 testers for 14 days before going public. An organization account (needs a D-U-N-S number) skips this. | Review usually takes 1–3 days. Describe the scheduled reminders, offline reading, and progress tracking in the review notes: Apple rejects apps that are "just a website". |
-
-- **App ID:** `org.neighborsandnations.sermonseries`, set in `capacitor.config.json` and the native projects. **It can't change after the first store upload**, so confirm it first.
-- **App name:** "Sermon Series", which people see under the icon.
-- **ESV in the apps:** the apps call the ESV API from `https://localhost` (Android) and `capacitor://localhost` (iOS). If you use the proxy, add both to `ALLOWED_ORIGINS`.
 
 ## Starting a new series later
 
@@ -156,10 +119,7 @@ series/romans/series.json                 the Romans plan (edit this)
 js/schedule.js                            date logic (unit-tested)
 js/esv.js, js/reminders.js, js/media.js   ESV fetch, reminders + .ics, video/Spotify embeds
 js/views/*.js                             the five screens
-js/native.js                              phone-app-only features (notifications, back button, links)
 css/app.css                               styles (light + dark)
-android/, ios/, capacitor.config.json     the phone apps (Capacitor)
-assets/                                   phone icon + splash sources
 icons/                                    app icons (npm run icons re-renders PNGs)
 server/esv-proxy.worker.js                optional key-hiding ESV proxy
 scripts/                                  scaffold, validate, icon tools

@@ -2,19 +2,13 @@ import { settings, progress } from '../store.js';
 import { requestPermission, notificationsSupported, buildICS, downloadFile } from '../reminders.js';
 import { ESV_COPYRIGHT } from '../esv.js';
 import { config } from '../../config.js';
-import { isNative, nativeNotificationPermission } from '../native.js';
 import { esc, icon } from '../ui.js';
 
 const isStandalone = () =>
   matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent);
 
-function permissionNote(nativeDenied = false) {
-  if (isNative()) {
-    return nativeDenied
-      ? 'Notifications are off for this app. Turn them on in your phone’s Settings, then try again.'
-      : 'You’ll get a notification at this time on each reading day. Readings you’ve finished are skipped.';
-  }
+function permissionNote() {
   if (!notificationsSupported()) {
     return isIOS() && !isStandalone()
       ? 'On iPhone, add this app to your Home Screen first to allow notifications.'
@@ -28,7 +22,6 @@ export function settingsView(ctx) {
   const s = settings.get();
   const { series, index } = ctx;
 
-  const native = isNative();
   const install = isStandalone()
     ? '<p class="muted">Installed — you’re using the app.</p>'
     : ctx.installPrompt
@@ -62,7 +55,7 @@ export function settingsView(ctx) {
         <p class="muted small" id="perm-note">${esc(permissionNote())}</p>
       </section>
 
-      ${native ? '' : `<section class="card">
+      <section class="card">
         <h2 class="section-title">${icon('calendar')} Add to your calendar</h2>
         <p>Puts every remaining reading on your phone’s calendar with an alert at your reminder time.</p>
         <label class="switch">
@@ -70,7 +63,7 @@ export function settingsView(ctx) {
           <span>Include Sunday sermons</span>
         </label>
         <button id="ics" class="btn btn-secondary">${icon('calendar')} Download calendar file</button>
-      </section>`}
+      </section>
 
       <section class="card">
         <h2 class="section-title">Reading text size</h2>
@@ -80,10 +73,10 @@ export function settingsView(ctx) {
         </div>
       </section>
 
-      ${native ? '' : `<section class="card">
+      <section class="card">
         <h2 class="section-title">Get the app</h2>
         ${install}
-      </section>`}
+      </section>
 
       ${seriesPicker}
 
@@ -102,24 +95,19 @@ export function settingsView(ctx) {
       const note = root.querySelector('#perm-note');
       const toggle = root.querySelector('#reminders');
       toggle.addEventListener('change', async () => {
-        let denied = false;
         if (toggle.checked) {
-          const result = native ? await nativeNotificationPermission({ ask: true }) : await requestPermission();
-          denied = native ? result !== 'granted' : result === 'denied';
-          if (denied) toggle.checked = false;
+          const result = await requestPermission();
+          if (result === 'denied') toggle.checked = false;
         }
         settings.set({ remindersOn: toggle.checked, lastNotified: null });
-        note.textContent = permissionNote(denied);
-        ctx.onReminderSettingsChange();
+        note.textContent = permissionNote();
       });
 
       root.querySelector('#reminder-time').addEventListener('change', (e) => {
-        if (!e.target.value) return;
-        settings.set({ reminderTime: e.target.value, lastNotified: null });
-        ctx.onReminderSettingsChange();
+        if (e.target.value) settings.set({ reminderTime: e.target.value, lastNotified: null });
       });
 
-      root.querySelector('#ics')?.addEventListener('click', () => {
+      root.querySelector('#ics').addEventListener('click', () => {
         const appUrl = location.href.split('#')[0];
         const ics = buildICS({
           series,

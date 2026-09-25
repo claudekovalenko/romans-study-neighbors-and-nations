@@ -2,28 +2,13 @@
   "name": "sermon-series",
   "version": "0.1.0",
   "private": true,
-  "description": "Installable web app (PWA) for following a church sermon series day by day \u2014 built for Romans at Neighbors and Nations Church.",
+  "description": "Installable web app (PWA) for following a church sermon series day by day — built for Romans at Neighbors and Nations Church.",
   "type": "module",
   "scripts": {
     "start": "npx --yes serve -l 8080 .",
     "test": "node --test",
     "validate": "node scripts/validate.mjs",
     "new-series": "node scripts/new-series.mjs",
-    "icons": "node scripts/render-icons.mjs",
-    "build": "node scripts/build-web.mjs",
-    "sync": "npm run build && npx cap sync",
-    "android": "npm run sync && npx cap open android",
-    "ios": "npm run sync && npx cap open ios"
-  },
-  "dependencies": {
-    "@capacitor/android": "^8.5.2",
-    "@capacitor/app": "^8.1.1",
-    "@capacitor/browser": "^8.0.4",
-    "@capacitor/core": "^8.5.2",
-    "@capacitor/ios": "^8.5.2",
-    "@capacitor/local-notifications": "^8.3.1"
-  },
-  "devDependencies": {
-    "@capacitor/cli": "^8.5.2"
+    "icons": "node scripts/render-icons.mjs"
   }
 }

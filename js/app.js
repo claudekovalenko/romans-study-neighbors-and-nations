@@ -1,8 +1,7 @@
 import { config } from '../config.js';
 import { buildSchedule, locate } from './schedule.js';
-import { settings, progress, dataCache } from './store.js';
+import { settings } from './store.js';
 import { checkReminder } from './reminders.js';
-import { isNative, initNative, scheduleReadingReminders } from './native.js';
 import { esc } from './ui.js';
 import { homeView } from './views/home.js';
 import { weeksListView, weekDetailView } from './views/weeks.js';
@@ -29,30 +28,14 @@ const ctx = {
   installPrompt: null,
   rerender: () => render({ keepScroll: true }),
   onProgressChange: () => remind(),
-  onReminderSettingsChange: () => remind(),
   applySettings,
   switchSeries,
 };
 
-async function fetchLocal(path) {
+async function fetchJSON(path) {
   const res = await fetch(path, { cache: 'no-cache' });
   if (!res.ok) throw new Error(`${path}: ${res.status}`);
   return res.json();
-}
-
-// In the phone apps, prefer the live website's copy so plan edits arrive
-// without a store update; fall back to the last copy seen, then the bundle.
-async function fetchJSON(path) {
-  if (!isNative() || !config.remoteBase) return fetchLocal(path);
-  try {
-    const res = await fetch(new URL(path, config.remoteBase), { cache: 'no-cache', signal: AbortSignal.timeout(5000) });
-    if (!res.ok) throw new Error(String(res.status));
-    const data = await res.json();
-    dataCache.put(path, data);
-    return data;
-  } catch {
-    return dataCache.get(path) ?? fetchLocal(path);
-  }
 }
 
 async function loadSeries(id) {
@@ -108,22 +91,10 @@ function render({ keepScroll = false } = {}) {
 
 function remind() {
   if (!ctx.series) return;
-  if (isNative()) {
-    const s = settings.get();
-    scheduleReadingReminders({
-      series: ctx.series,
-      schedule: ctx.schedule,
-      time: s.reminderTime,
-      enabled: s.remindersOn,
-      isDone: (id) => progress.isDone(ctx.series.id, id),
-    }).catch(() => {});
-  } else {
-    checkReminder({ series: ctx.series, readings: locate(ctx.schedule).todayReadings }).catch(() => {});
-  }
+  checkReminder({ series: ctx.series, readings: locate(ctx.schedule).todayReadings }).catch(() => {});
 }
 
 async function start() {
-  initNative();
   applySettings();
   try {
     ctx.index = await fetchJSON(config.seriesIndex);
@@ -149,7 +120,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   if (location.hash === '#/settings') ctx.rerender();
 });
 
-if ('serviceWorker' in navigator && !isNative()) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 
