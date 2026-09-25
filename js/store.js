@@ -82,3 +82,14 @@ export const esvCache = {
     write('esv-cache', list.slice(0, ESV_CACHE_MAX));
   },
 };
+
+// Last series files fetched from the website (phone apps only), so the
+// newest plan is still there when the phone is offline.
+export const dataCache = {
+  get(path) {
+    return read(`data:${path}`, null);
+  },
+  put(path, data) {
+    write(`data:${path}`, data);
+  },
+};

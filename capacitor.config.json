@@ -1,0 +1,15 @@
+{
+  "appId": "org.neighborsandnations.sermonseries",
+  "appName": "Sermon Series",
+  "webDir": "www",
+  "backgroundColor": "#f7f3ec",
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_notify",
+      "iconColor": "#b5832a"
+    }
+  },
+  "ios": {
+    "contentInset": "never"
+  }
+}

@@ -2,14 +2,22 @@
 // Renders icons/*.svg to the PNG sizes browsers and iOS need.
 // Needs Playwright:  npx playwright@latest --version  (or a global install)
 import { chromium } from 'playwright';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdirSync } from 'node:fs';
 
 const jobs = [
   ['icons/icon.svg', 'icons/icon-192.png', 192],
   ['icons/icon.svg', 'icons/icon-512.png', 512],
   ['icons/icon-maskable.svg', 'icons/icon-maskable-512.png', 512],
   ['icons/icon-maskable.svg', 'icons/apple-touch-icon.png', 180],
+  // Sources for the phone apps — `npx @capacitor/assets generate` turns
+  // these into every size iOS and Android need.
+  ['icons/icon-maskable.svg', 'assets/icon-only.png', 1024],
+  ['icons/icon-foreground.svg', 'assets/icon-foreground.png', 1024],
+  ['icons/icon-background.svg', 'assets/icon-background.png', 1024],
+  ['icons/splash.svg', 'assets/splash.png', 2732],
+  ['icons/splash-dark.svg', 'assets/splash-dark.png', 2732],
 ];
+mkdirSync('assets', { recursive: true });
 
 const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
 const page = await browser.newPage();
