@@ -1,0 +1,24 @@
+{
+  "name": "Sermon Series · Neighbors and Nations Church",
+  "short_name": "Sermon Series",
+  "description": "Daily ESV readings, sermon notes, and messages for the current sermon series at Neighbors and Nations Church.",
+  "id": "./",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f3ec",
+  "theme_color": "#1f2a44",
+  "categories": ["books", "education", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "Today's reading", "url": "./#/" },
+    { "name": "All weeks", "url": "./#/weeks" },
+    { "name": "Listen", "url": "./#/listen" }
+  ]
+}

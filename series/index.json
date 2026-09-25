@@ -1,0 +1,6 @@
+{
+  "active": "romans",
+  "series": [
+    { "id": "romans", "title": "Romans", "path": "series/romans/series.json" }
+  ]
+}
